@@ -17,3 +17,13 @@ def count_letters(text):
             letters[char] += 1
 
     return letters
+
+
+def sort_letters(letters_dict):
+    letters_list = []
+
+    for key, val in letters_dict.items():
+        letters_list.append({"char": key, "num": val})
+
+    letters_list.sort(key=lambda letter: letter["num"], reverse=True)
+    return letters_list
